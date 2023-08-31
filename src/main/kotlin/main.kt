@@ -1,7 +1,11 @@
 package ru.netology
 
-fun main(){
+const val COMMISSION_RATE = 0.0075
+const val MINIMUM_COMMISSION = 35.0
+
+fun main() {
     val amount = 5_020
-    val commission = if ((amount * 0.0075).toInt() >= 35) (amount * 0.0075).toInt() else 35
+    val commission =
+        if ((amount * COMMISSION_RATE).toInt() >= MINIMUM_COMMISSION) (amount * COMMISSION_RATE).toInt() else MINIMUM_COMMISSION
     println("Перевод: $amount р.\nКомиссия: $commission р.")
 }
